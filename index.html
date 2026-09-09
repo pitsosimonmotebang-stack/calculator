@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<script>
+
+    // Heading
+    const heading = document.createElement("h1");
+    heading.textContent = "Calculator";
+    document.body.appendChild(heading);
+
+
+    // First number input
+    const input1 = document.createElement("input");
+    input1.type = "text";
+    input1.placeholder = "Enter first number";
+    document.body.appendChild(input1);
+
+    document.body.appendChild(document.createElement("br"));
+    document.body.appendChild(document.createElement("br"));
+
+
+    // Second number input
+    const input2 = document.createElement("input");
+    input2.type = "text";
+    input2.placeholder = "Enter second number";
+    document.body.appendChild(input2);
+
+    document.body.appendChild(document.createElement("br"));
+    document.body.appendChild(document.createElement("br"));
+
+
+    // Third number input
+    const input3 = document.createElement("input");
+    input3.type = "text";
+    input3.placeholder = "Enter third number";
+    document.body.appendChild(input3);
+
+    document.body.appendChild(document.createElement("br"));
+    document.body.appendChild(document.createElement("br"));
+
+
+    // Email input
+    const email = document.createElement("input");
+    email.type = "email";
+    email.placeholder = "Enter your email";
+    document.body.appendChild(email);
+
+    document.body.appendChild(document.createElement("br"));
+    document.body.appendChild(document.createElement("br"));
+
+
+    // Create button
+    const button = document.createElement("button");
+    button.textContent = "Calculate";
+    document.body.appendChild(button);
+
+    document.body.appendChild(document.createElement("br"));
+    document.body.appendChild(document.createElement("br"));
+
+
+    // Paragraph
+    const result = document.createElement("p");
+    result.textContent = "The results will be here.";
+    document.body.appendChild(result);
+
+
+    // Button functionality
+    button.addEventListener("click", function() {
+
+        const number1 = Number(input1.value);
+        const number2 = Number(input2.value);
+        const number3 = Number(input3.value);
+
+        // Calculate the sum
+        const sum = number1 + number2 + number3;
+
+        // Display the result
+        result.textContent = "The sum is: " + sum;
+    });
+
+</script>
+
+</body>
+</html>
